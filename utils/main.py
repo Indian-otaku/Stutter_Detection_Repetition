@@ -12,7 +12,8 @@ app = FastAPI()
 
 accepted_file_types = [
     "audio/wav",
-    "audio/mpeg"
+    "audio/mpeg",
+    "audio/wave"
 ]
 
 @app.post("/api/repetition")
