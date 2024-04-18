@@ -41,7 +41,3 @@ async def general_audio_info(audio: UploadFile):
         
     
     return {"error": "Invalid file"}
-    
-
-if __name__ == '__main__':
-	uvicorn.run(app, port=10000, host="0.0.0.0")
