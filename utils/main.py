@@ -10,6 +10,18 @@ from get_model import get_pretrained_model
 
 app = FastAPI()
 
+origins = ["*"]
+methods = ["*"]
+headers = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=methods,
+    allow_headers=headers,
+)
+
 accepted_file_types = [
     "audio/wav",
     "audio/mpeg",
